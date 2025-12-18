@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kiemtraflutter/bai_12/api.dart';
 import 'package:kiemtraflutter/bai_12/model/product.dart';
 import 'package:kiemtraflutter/bai_12/product_detail.dart';
-import 'package:kiemtraflutter/bai_12/cart_screen.dart'; // Đảm bảo dòng này không báo lỗi đỏ
+import 'package:kiemtraflutter/bai_12/cart_screen.dart'; 
 
 class MyProduct extends StatefulWidget {
   const MyProduct({super.key});
@@ -56,15 +56,12 @@ class _MyProductState extends State<MyProduct> {
                   ),
                 ),
               ),
-              // --- NÚT GIỎ HÀNG (SỬA LỖI TẠI ĐÂY) ---
               IconButton(
                 onPressed: () {
-                  // Chuyển sang màn hình giỏ hàng
                   Navigator.push(
                     context, 
                     MaterialPageRoute(builder: (context) => const CartScreen())
                   ).then((value) {
-                    // Khi quay lại từ giỏ hàng, cập nhật lại (nếu cần)
                     setState(() {});
                   });
                 },
@@ -73,7 +70,6 @@ class _MyProductState extends State<MyProduct> {
                   color: Colors.black,
                 ),
               ),
-              // -------------------------------------
               IconButton(
                 onPressed: () {},
                 icon: const Icon(Icons.chat_bubble_outline, color: Colors.black),

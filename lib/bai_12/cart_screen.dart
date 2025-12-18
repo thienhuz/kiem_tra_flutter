@@ -12,7 +12,6 @@ class CartScreen extends StatefulWidget {
 class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
-    // Gọi setState để đảm bảo UI cập nhật mỗi khi vào màn hình này
     return Scaffold(
       appBar: AppBar(
         title: Text("Giỏ hàng (${CartData.cartItems.length} món)"),
