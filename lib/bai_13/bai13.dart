@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:kiemtraflutter/bai13/api.dart';
-import 'package:kiemtraflutter/bai13/detail_screen.dart';
-import 'package:kiemtraflutter/bai13/model/product.dart';
+import 'package:kiemtraflutter/bai_13/api.dart';
+import 'package:kiemtraflutter/bai_13/detail_screen.dart';
+import 'package:kiemtraflutter/bai_13/model/product.dart';
 
 class MyProduct extends StatefulWidget {
   const MyProduct({super.key});

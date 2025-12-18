@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kiemtraflutter/bai12/cart_data.dart'; // Import file data vừa tạo
-import 'package:kiemtraflutter/bai12/model/product.dart';
+import 'package:kiemtraflutter/bai_12/cart_data.dart'; // Import file data vừa tạo
+import 'package:kiemtraflutter/bai_12/model/product.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});

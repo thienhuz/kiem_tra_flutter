@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:kiemtraflutter/bai13/model/product.dart';
-import 'package:kiemtraflutter/bai13/url_launcher.dart';
+import 'package:kiemtraflutter/bai_13/model/product.dart';
+import 'package:kiemtraflutter/bai_13/url_launcher.dart';
 
 class DetailScreen extends StatelessWidget {
   final Product product;

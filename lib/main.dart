@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'bai1/bai1.dart' as bai1;
-import 'bai2/bai2.dart' as bai2;
-import 'bai3/bai3.dart' as bai3;
-import 'bai4/bai4.dart' as bai4;
-import 'bai5/bai5.dart' as bai5;
-import 'bai6/bai6.dart' as bai6;
-import 'bai7/bai7.dart' as bai7;
-import 'bai8/bai8.dart' as bai8;
-import 'bai9/bai9.dart' as bai9;
-import 'bai10/bai10.dart' as bai10 ;
-import 'bai11/bai11.dart' as bai11;
+import 'bai_1/bai1.dart' as bai1;
+import 'bai_2/bai2.dart' as bai2;
+import 'bai_3/bai3.dart' as bai3;
+import 'bai_4/bai4.dart' as bai4;
+import 'bai_5/bai5.dart' as bai5;
+import 'bai_6/bai6.dart' as bai6;
+import 'bai_7/bai7.dart' as bai7;
+import 'bai_8/bai8.dart' as bai8;
+import 'bai_9/bai9.dart' as bai9;
+import 'bai_10/bai10.dart' as bai10 ;
+import 'bai_11/bai11.dart' as bai11;
 import 'bai_12/bai12.dart' as bai12;
-import 'bai13/bai13.dart' as bai13 ;
-import 'bai14/bai14.dart' as bai14 ;
+import 'bai_13/bai13.dart' as bai13 ;
+import 'bai_14/bai14.dart' as bai14 ;
 void main() {
   runApp(const MyApp());
 }

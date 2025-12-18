@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:kiemtraflutter/bai14/model/user.dart';
+import 'package:kiemtraflutter/bai_14/model/user.dart';
 
 class Api {
   static const String baseUrl = 'https://dummyjson.com';

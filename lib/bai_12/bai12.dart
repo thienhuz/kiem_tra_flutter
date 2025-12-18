@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kiemtraflutter/bai12/api.dart';
-import 'package:kiemtraflutter/bai12/model/product.dart';
-import 'package:kiemtraflutter/bai12/product_detail.dart';
-import 'package:kiemtraflutter/bai12/cart_screen.dart'; // <--- MỚI: Import màn hình giỏ hàng
+import 'package:kiemtraflutter/bai_12/api.dart';
+import 'package:kiemtraflutter/bai_12/model/product.dart';
+import 'package:kiemtraflutter/bai_12/product_detail.dart';
+import 'package:kiemtraflutter/bai_12/cart_screen.dart'; 
 
 class MyProduct extends StatefulWidget {
   const MyProduct({super.key});
@@ -62,14 +62,12 @@ class _MyProductState extends State<MyProduct> {
                 ),
               ),
               IconButton(
-                // --- ĐOẠN CODE ĐƯỢC CẬP NHẬT ---
                 onPressed: () {
                   Navigator.push(
                     context, 
                     MaterialPageRoute(builder: (context) => const CartScreen())
                   );
                 },
-                // -------------------------------
                 icon: const Icon(
                   Icons.shopping_cart_outlined,
                   color: Colors.black,

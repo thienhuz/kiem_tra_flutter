@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:kiemtraflutter/bai12/model/rating.dart';
+import 'package:kiemtraflutter/bai_12/model/rating.dart';
 
 class Product {
   int id;

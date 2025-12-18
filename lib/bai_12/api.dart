@@ -1,6 +1,6 @@
 
 import 'package:dio/dio.dart';
-import 'package:kiemtraflutter/bai12/model/product.dart';
+import 'package:kiemtraflutter/bai_12/model/product.dart';
 
 class Api {
   Future<List<Product>> getAllProduct() async {
