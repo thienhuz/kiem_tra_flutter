@@ -93,7 +93,9 @@ class ProductDetailScreen extends StatelessWidget {
         ),
         child: ElevatedButton(
           onPressed: () {
+            // --- ĐOẠN CODE ĐƯỢC THÊM MỚI ---
             CartData.addToCart(product); 
+            // -------------------------------
             
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text("Đã thêm '${product.title}' vào giỏ hàng!")),

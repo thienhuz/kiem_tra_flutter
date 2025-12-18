@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kiemtraflutter/bai_12/api.dart';
 import 'package:kiemtraflutter/bai_12/model/product.dart';
 import 'package:kiemtraflutter/bai_12/product_detail.dart';
-import 'package:kiemtraflutter/bai_12/cart_screen.dart'; 
+import 'package:kiemtraflutter/bai_12/cart_screen.dart'; // Đảm bảo dòng này không báo lỗi đỏ
 
 class MyProduct extends StatefulWidget {
   const MyProduct({super.key});
@@ -13,7 +13,6 @@ class MyProduct extends StatefulWidget {
 
 class _MyProductState extends State<MyProduct> {
   String keySearch = "";
-
   late Future<List<Product>> _futureProduct;
 
   @override
@@ -40,7 +39,6 @@ class _MyProductState extends State<MyProduct> {
                     children: [
                       Expanded(
                         child: TextField(
-                        
                           onChanged: (value) {
                             setState(() {
                               keySearch = value;
@@ -48,12 +46,9 @@ class _MyProductState extends State<MyProduct> {
                           },
                           decoration: InputDecoration(
                             prefixIcon: const Icon(Icons.search),
-                            hintText: "Tìm kiếm sản phẩm",
+                            hintText: "Tìm kiếm...",
                             border: InputBorder.none,
-                            suffixIcon: const Icon(
-                              Icons.camera_alt_outlined,
-                              color: Colors.grey,
-                            ),
+                            contentPadding: const EdgeInsets.symmetric(vertical: 9),
                           ),
                         ),
                       ),
@@ -61,24 +56,27 @@ class _MyProductState extends State<MyProduct> {
                   ),
                 ),
               ),
+              // --- NÚT GIỎ HÀNG (SỬA LỖI TẠI ĐÂY) ---
               IconButton(
                 onPressed: () {
+                  // Chuyển sang màn hình giỏ hàng
                   Navigator.push(
                     context, 
                     MaterialPageRoute(builder: (context) => const CartScreen())
-                  );
+                  ).then((value) {
+                    // Khi quay lại từ giỏ hàng, cập nhật lại (nếu cần)
+                    setState(() {});
+                  });
                 },
                 icon: const Icon(
                   Icons.shopping_cart_outlined,
                   color: Colors.black,
                 ),
               ),
+              // -------------------------------------
               IconButton(
                 onPressed: () {},
-                icon: const Icon(
-                  Icons.chat_bubble_outline,
-                  color: Colors.black,
-                ),
+                icon: const Icon(Icons.chat_bubble_outline, color: Colors.black),
               ),
             ],
           ),
@@ -97,7 +95,6 @@ class _MyProductState extends State<MyProduct> {
           }
           if (snap.hasData) {
             List<Product> listGoc = snap.data!;
-          
             List<Product> listHienThi = listGoc.where((p) {
               return p.title.toLowerCase().contains(keySearch.toLowerCase());
             }).toList();
@@ -105,7 +102,6 @@ class _MyProductState extends State<MyProduct> {
             if (listHienThi.isEmpty) {
               return const Center(child: Text("Không tìm thấy sản phẩm"));
             }
-
             return myListProduct(listHienThi);
           }
           return const Text("Empty");
@@ -181,7 +177,6 @@ class _MyProductState extends State<MyProduct> {
                     ),
                   ],
                 ),
-               
                 Flexible(
                   child: Text(
                     p.category,
@@ -196,7 +191,7 @@ class _MyProductState extends State<MyProduct> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "${p.price} USD",
+                  "\$${p.price}",
                   style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -204,7 +199,7 @@ class _MyProductState extends State<MyProduct> {
                   ),
                 ),
                 Text(
-                  "${p.rating.count} Đánh giá",
+                  "${p.rating.count}",
                   style: const TextStyle(fontSize: 12),
                 ),
               ],

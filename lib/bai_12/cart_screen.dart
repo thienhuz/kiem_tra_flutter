@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kiemtraflutter/bai_12/cart_data.dart'; // Import file data vừa tạo
+import 'package:kiemtraflutter/bai_12/cart_data.dart'; 
 import 'package:kiemtraflutter/bai_12/model/product.dart';
 
 class CartScreen extends StatefulWidget {
@@ -12,17 +12,25 @@ class CartScreen extends StatefulWidget {
 class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
+    // Gọi setState để đảm bảo UI cập nhật mỗi khi vào màn hình này
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Giỏ hàng của bạn"),
+        title: Text("Giỏ hàng (${CartData.cartItems.length} món)"),
         backgroundColor: Colors.orange,
         foregroundColor: Colors.white,
       ),
       body: CartData.cartItems.isEmpty
           ? const Center(
-              child: Text(
-                "Giỏ hàng trống",
-                style: TextStyle(fontSize: 18, color: Colors.grey),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.shopping_cart_outlined, size: 60, color: Colors.grey),
+                  SizedBox(height: 10),
+                  Text(
+                    "Giỏ hàng trống",
+                    style: TextStyle(fontSize: 18, color: Colors.grey),
+                  ),
+                ],
               ),
             )
           : ListView.builder(
@@ -67,7 +75,7 @@ class _CartScreenState extends State<CartScreen> {
                               CartData.removeProduct(product);
                             });
                             ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(content: Text("Đã xóa sản phẩm khỏi giỏ hàng")),
+                              const SnackBar(content: Text("Đã xóa sản phẩm")),
                             );
                           },
                         )
@@ -87,15 +95,12 @@ class _CartScreenState extends State<CartScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              "Tổng cộng: \$${CartData.getTotalPrice().toStringAsFixed(2)}",
+              "Tổng: \$${CartData.getTotalPrice().toStringAsFixed(2)}",
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.red),
             ),
             ElevatedButton(
-              onPressed: () {
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.orange,
-              ),
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
               child: const Text("Thanh toán", style: TextStyle(color: Colors.white)),
             )
           ],

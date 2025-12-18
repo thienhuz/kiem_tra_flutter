@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:kiemtraflutter/bai_12/model/rating.dart';
 
 class Product {
