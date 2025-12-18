@@ -36,14 +36,12 @@ class _CartScreenState extends State<CartScreen> {
                     padding: const EdgeInsets.all(10),
                     child: Row(
                       children: [
-                        // Ảnh sản phẩm
                         SizedBox(
                           width: 80,
                           height: 80,
                           child: Image.network(product.image, fit: BoxFit.contain),
                         ),
                         const SizedBox(width: 10),
-                        // Thông tin
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,7 +60,6 @@ class _CartScreenState extends State<CartScreen> {
                             ],
                           ),
                         ),
-                        // Nút xóa
                         IconButton(
                           icon: const Icon(Icons.delete, color: Colors.red),
                           onPressed: () {
@@ -95,7 +92,6 @@ class _CartScreenState extends State<CartScreen> {
             ),
             ElevatedButton(
               onPressed: () {
-                // Xử lý thanh toán (nếu cần)
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.orange,

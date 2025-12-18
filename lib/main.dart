@@ -10,7 +10,7 @@ import 'bai8/bai8.dart' as bai8;
 import 'bai9/bai9.dart' as bai9;
 import 'bai10/bai10.dart' as bai10 ;
 import 'bai11/bai11.dart' as bai11;
-import 'bai12/bai12.dart' as bai12;
+import 'bai_12/bai12.dart' as bai12;
 import 'bai13/bai13.dart' as bai13 ;
 import 'bai14/bai14.dart' as bai14 ;
 void main() {
