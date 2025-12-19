@@ -13,6 +13,7 @@ import 'bai_11/bai11.dart' as bai11;
 import 'bai_12/bai12.dart' as bai12;
 import 'bai_13/bai13.dart' as bai13 ;
 import 'bai_14/bai14.dart' as bai14 ;
+
 void main() {
   runApp(const MyApp());
 }
@@ -114,7 +115,12 @@ class _MainScreenState extends State<MainScreen> {
                 ),
               ),
             ),
-
+            ListTile(
+              leading: const Icon(Icons.home, color: Colors.blue),
+              title: const Text('Trang chủ'),
+              onTap: () => _onItemTapped(-1, "Flutter Assignments"),
+            ),
+            const Divider(),
             const Padding(
               padding: EdgeInsets.all(16.0),
               child: Text(
@@ -132,79 +138,79 @@ class _MainScreenState extends State<MainScreen> {
               onTap: () => _onItemTapped(0, "Bài 1 : My Place "),
             ),
             ListTile(
-              leading: const Icon(Icons.image, color: Colors.blue),
+              leading: const Icon(Icons.assignment, color: Colors.blue), // Icon bài tập
               title: const Text('Bài 2 : Exercise 2 '),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () => _onItemTapped(1, "Bài 2 : Exercise 2 "),
             ),
             ListTile(
-              leading: const Icon(Icons.image, color: Colors.blue),
+              leading: const Icon(Icons.map, color: Colors.blue), // Icon bản đồ
               title: const Text('Bài 3 : My Guide '),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () => _onItemTapped(2, "Bài 3 : My Guide "),
             ),
             ListTile(
-              leading: const Icon(Icons.image, color: Colors.blue),
+              leading: const Icon(Icons.home, color: Colors.blue), 
               title: const Text('Bài 4 : Home Page '),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () => _onItemTapped(3, "Bài 4 : Home Page "),
             ),
             ListTile(
-              leading: const Icon(Icons.image, color: Colors.blue),
+              leading: const Icon(Icons.color_lens, color: Colors.blue), 
               title: const Text('Bài 5 :Change Color App'),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () => _onItemTapped(4, "Bài 5 :Change Color App"),
             ),
             ListTile(
-              leading: const Icon(Icons.image, color: Colors.blue),
+              leading: const Icon(Icons.exposure_plus_1, color: Colors.blue), 
               title: const Text('Bài 6 : Count App'),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () => _onItemTapped(5, "Bài 6 : Count App"),
             ),
             ListTile(
-              leading: const Icon(Icons.image, color: Colors.blue),
+              leading: const Icon(Icons.timer, color: Colors.blue), 
               title: const Text('Bài 7 :Count Time App'),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () => _onItemTapped(6, "Bài 7 :Count Time App"),
             ),
             ListTile(
-              leading: const Icon(Icons.image, color: Colors.blue),
+              leading: const Icon(Icons.login, color: Colors.blue), 
               title: const Text('Bài 8 : Login'),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () => _onItemTapped(7, "Bài 8 : Login"),
             ),
             ListTile(
-              leading: const Icon(Icons.image, color: Colors.blue),
+              leading: const Icon(Icons.app_registration, color: Colors.blue), 
               title: const Text('Bài 9 : Register'),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () => _onItemTapped(8, "Bài 9 : Register"),
             ),
             ListTile(
-              leading: const Icon(Icons.image, color: Colors.blue),
+              leading: const Icon(Icons.monitor_weight, color: Colors.blue),
               title: const Text('Bài 10: BMI '),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () => _onItemTapped(9, "Bài 10 : BMI"),
             ),
             ListTile(
-              leading: const Icon(Icons.image, color: Colors.blue),
-              title: const Text('Bài 11: Phan hồi '),
+              leading: const Icon(Icons.feedback, color: Colors.blue), 
+              title: const Text('Bài 11: Phản hồi '),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-              onTap: () => _onItemTapped(10, "Bài 11 : Phan hồi"),
+              onTap: () => _onItemTapped(10, "Bài 11 : Phản hồi"),
             ),  
             ListTile(
-              leading: const Icon(Icons.image, color: Colors.blue),
+              leading: const Icon(Icons.shopping_bag, color: Colors.blue), 
               title: const Text('Bài 12: Product '),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () => _onItemTapped(11, "Bài 12 : Product"),
             ),
             ListTile(
-              leading: const Icon(Icons.image, color: Colors.blue),
+              leading: const Icon(Icons.api, color: Colors.blue), 
               title: const Text('Bài 13: New API '),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () => _onItemTapped(12, "Bài 13 : New API"),
             ),
             ListTile(
-              leading: const Icon(Icons.image, color: Colors.blue),
+              leading: const Icon(Icons.lock_person, color: Colors.blue),
               title: const Text('Bài 14: Login API '),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () => _onItemTapped(13, "Bài 14 : Login API"),
@@ -224,9 +230,9 @@ class _MainScreenState extends State<MainScreen> {
         children: const [
           Icon(Icons.menu, size: 80, color: Colors.blue),
           SizedBox(height: 20),
-          Text("Open the menu on the left 👈", style: TextStyle(fontSize: 18)),
+          Text("Kích vào để hiển thị danh sách👈", style: TextStyle(fontSize: 18)),
           Text(
-            "Select a lesson to explore",
+            "Chọn bài tập từ thanh điều hướng bên trái",
             style: TextStyle(fontSize: 16, color: Colors.grey),
           ),
         ],
